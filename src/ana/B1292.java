@@ -1,0 +1,23 @@
+package ana;
+import java.util.Scanner;
+public class B1292 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int A,B,count=0,result=0;
+		A=sc.nextInt();
+		B=sc.nextInt();
+		int[] arr=new int[1050];
+		for(int i=1;i<45;i++) {
+			for(int j=0;j<i;j++) {
+				arr[count+j]=i;
+			}
+			count=count+i;
+		}
+		for(int k=A-1;k<B;k++) {
+			result=result+arr[k];
+		}
+		System.out.printf("%d", result);
+	}
+
+}
